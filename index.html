@@ -1,19 +1,30 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="az">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Patron Club</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <div class="bg-overlay"></div>
+
+  <div class="bg-grid"></div>
 
   <main class="hero">
-    <section class="content">
+
+    <section class="left">
+
       <div class="badge">
         PRIVATE COMMUNITY
       </div>
@@ -28,27 +39,29 @@
       </p>
 
       <div class="features">
-        <div class="feature-card">
+
+        <div class="feature">
           <span>⚡</span>
           Sürətli giriş
         </div>
 
-        <div class="feature-card">
+        <div class="feature">
           <span>👑</span>
           Premium community
         </div>
 
-        <div class="feature-card">
+        <div class="feature">
           <span>💬</span>
           Aktiv dəstək
         </div>
+
       </div>
 
       <a
         href="https://t.me/+5T3ikpdytrs3NDli"
         class="cta-btn"
+        id="telegramBtn"
         target="_blank"
-        rel="noopener noreferrer"
       >
         Telegram Kanalına Qoşul
       </a>
@@ -56,19 +69,24 @@
       <p class="small-text">
         Daxil olmaq üçün düyməyə klik et.
       </p>
+
     </section>
 
-    <section class="image-side">
+    <section class="right">
+
       <div class="glow"></div>
 
       <img
-        src="kenan.png"
+        src="./kenan.png"
         alt="Kenan"
-        class="kenan-img"
+        class="kenan"
       />
+
     </section>
+
   </main>
 
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
+
 </body>
 </html>
