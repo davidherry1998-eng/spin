@@ -1,18 +1,38 @@
-const button = document.querySelector('.cta-btn');
+const cta = document.querySelector(".cta");
+const mainCard = document.querySelector(".main-card");
 
-button.addEventListener('click', () => {
-  console.log('Telegram CTA clicked');
+cta.addEventListener("click", function (event) {
+  event.preventDefault();
 
-  // Meta Pixel event
-  if (typeof fbq === 'function') {
-    fbq('track', 'Lead');
-  }
+  mainCard.animate(
+    [
+      { transform: "scale(1)" },
+      { transform: "scale(1.015)" },
+      { transform: "scale(1)" }
+    ],
+    {
+      duration: 450,
+      easing: "ease-out"
+    }
+  );
 
-  // Google Analytics event
-  if (typeof gtag === 'function') {
-    gtag('event', 'telegram_join_click', {
-      event_category: 'CTA',
-      event_label: 'Patron Club Telegram'
-    });
-  }
+  alert("Educational mockup only: always verify risks before trusting financial or gambling claims.");
+});
+
+const floatingCards = document.querySelectorAll(".floating-card");
+const coins = document.querySelectorAll(".coin");
+
+window.addEventListener("mousemove", (event) => {
+  const x = (event.clientX / window.innerWidth - 0.5) * 20;
+  const y = (event.clientY / window.innerHeight - 0.5) * 20;
+
+  floatingCards.forEach((card, index) => {
+    const strength = index + 1;
+    card.style.transform = `translate(${x / strength}px, ${y / strength}px)`;
+  });
+
+  coins.forEach((coin, index) => {
+    const strength = (index + 1) * 1.5;
+    coin.style.transform = `translate(${x / strength}px, ${y / strength}px) rotate(${index * 12}deg)`;
+  });
 });
